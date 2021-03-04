@@ -84,7 +84,7 @@ handle some NSE corner cases I haven’t thought of):
 ``` r
 by_row = function(expr) {
   .expr = enquo(expr)
-  .data = cur_data()
+  .data = cur_data_all()
   .env = parent.frame()
 
   simplify(lapply(seq_len(nrow(.data)), function(i) {
